@@ -1,6 +1,6 @@
 const {Router} = require('express')
 const router = Router()
-const devices = require('../middleware/devices')
+const devices = require('../middleware/devices/devices')
 
 router.get('/battery',  (req, res) => {
     let received = Buffer.alloc(0)
