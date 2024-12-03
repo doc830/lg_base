@@ -18,6 +18,7 @@ server.use(cors({
     allowedHeaders: 'Origin,X-Requested-With,Content-Type,Accept,Authorization'
 }))
 server.use("/api/info", require("./routes/info.routes"))
+server.use('/api/rover', require('./routes/rover.routes'))
 server.use('/api/stream', require('./routes/stream.routes')) //enable navi data stream api
 
 

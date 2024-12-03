@@ -16,7 +16,7 @@ class Stream  {
     }
     addPlayer(player) {
         this._players.push(player)
-        player.updateData({"stream": "started"})
+        player.updateData({"Stream": "started"})
     }
     removePlayer(player) {
         const i = this._players.indexOf(player)
