@@ -1,20 +1,11 @@
 class Stream  {
     constructor() {
         this._players = []
-        this._nav_data = {}
-        this._visibility_data = {
-            type: "visibility",
-            status: false}
+        this._data = {}
     }
-    setNavData (data) {
-        if (data !== this._nav_data) {
-            this._nav_data = data
-            this.notifyPlayers(data)
-        }
-    }
-    setVisibilityData (data) {
-        if (data !== this._visibility_data) {
-            this._visibility_data = data
+    setData (data) {
+        if (data !== this._data) {
+            this._data = data
             this.notifyPlayers(data)
         }
     }
@@ -25,7 +16,6 @@ class Stream  {
     }
     addPlayer(player) {
         this._players.push(player)
-        player.updateData(this._visibility_data)
     }
     removePlayer(player) {
         const i = this._players.indexOf(player)
