@@ -3,6 +3,7 @@ const stream = require('../middleware/stream/stream')
 const fs = require('fs')
 const path = require('path')
 const router = Router()
+
 router.post('/weather', (req, res) => {
     res.status(200)
     stream.setData(req.body)
@@ -13,7 +14,7 @@ router.post('/visibility', (req, res) => {
 })
 router.post('/ubx',  async (req, res)=> {
     res.status(200)
-    saveToFile('/logs/ubx.json', req.body)
+    saveToFile('/root/lg_base/logs/ubx.json', req.body)
         .then(() => {})
         .catch((err) => {
             console.error('Error saving user data:', err);
@@ -22,7 +23,7 @@ router.post('/ubx',  async (req, res)=> {
 })
 router.post('/nmea', async (req, res)=> {
     res.status(200)
-    saveToFile('/logs/nmea.json', req.body)
+    saveToFile('/root/lg_base/logs/ubx.json', req.body)
         .then(() => {})
         .catch((err) => {
             console.error('Error saving user data:', err);
