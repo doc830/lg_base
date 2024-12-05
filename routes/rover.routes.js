@@ -14,7 +14,7 @@ router.post('/visibility', (req, res) => {
 })
 router.post('/ubx',  async (req, res)=> {
     res.status(200)
-    saveToFile('/root/lg_base/logs/ubx.json', req.body)
+    saveToFile('../logs/ubx.json', req.body)
         .then(() => {})
         .catch((err) => {
             console.error('Error saving user data:', err);
@@ -23,7 +23,7 @@ router.post('/ubx',  async (req, res)=> {
 })
 router.post('/nmea', async (req, res)=> {
     res.status(200)
-    saveToFile('/root/lg_base/logs/ubx.json', req.body)
+    saveToFile('../logs/ubx.json', req.body)
         .then(() => {})
         .catch((err) => {
             console.error('Error saving user data:', err);
