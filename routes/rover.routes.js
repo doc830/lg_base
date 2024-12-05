@@ -23,7 +23,7 @@ router.post('/ubx',  async (req, res)=> {
 })
 router.post('/nmea', async (req, res)=> {
     res.status(200)
-    saveToFile('../logs/ubx.json', req.body)
+    saveToFile('../logs/nmea.json', req.body)
         .then(() => {})
         .catch((err) => {
             console.error('Error saving user data:', err);
