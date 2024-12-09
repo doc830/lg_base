@@ -10,11 +10,11 @@ router.post('/visibility', (req, res) => {
     res.status(200)
     stream.setData(req.body)
 })
-router.post('/ubx-relposned',  async (req, res)=> {
+router.post('/ubx-relposned',  (req, res)=> {
     res.status(200)
    stream.setData(req.body)
 })
-router.post('/ubx-pvt',  async (req, res)=> {
+router.post('/ubx-pvt',   (req, res)=> {
     res.status(200)
     stream.setData(req.body)
 })
